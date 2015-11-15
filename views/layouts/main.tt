@@ -12,7 +12,6 @@
 <body>
 <h1>{{title}}</h1>
 <% content %>
-<img src="/images/perldancer.jpg">
 <div>
 <img src="/images/dcr-header-logo.png">
 </div>

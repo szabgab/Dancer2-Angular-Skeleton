@@ -1,8 +1,10 @@
+<img src="/images/perldancer.jpg">
 <h2>Dancer2 with AngularJS</h2> 
-date: {{date}}
-Dancer 2 version: {{dancer}}
-Perl version: {{perl}}
+<div>Date: {{date}}</div>
+<div>Dancer 2 version: {{dancer}}</div>
+<div>Perl version: {{perl}}</div>
+<button ng-init="config_table=0" ng-click="config_table = !config_table"><span ng-if="config_table">Hide</span> <span ng-if="!config_table">Show</span> Config</button>
 <hr>
-<table>
+<table ng-show="config_table">
 <tr ng-repeat="(k, v) in config"><td>{{k}}</td><td>{{v}}</td></tr>
 </table>
