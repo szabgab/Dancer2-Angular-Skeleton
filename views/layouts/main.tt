@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="DancerApp" ng-controller="DancerController">
 <head>
   <meta charset="<% settings.charset %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -9,7 +9,7 @@
   <script src="/javascripts/dancer.js"></script>
 
 </head>
-<body ng-app="DancerApp" ng-controller="DancerController">
+<body>
 <h1>{{title}}</h1>
 <% content %>
 <img src="/images/perldancer.jpg">
