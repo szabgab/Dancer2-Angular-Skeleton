@@ -3,18 +3,19 @@
 <head>
   <meta charset="<% settings.charset %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>[% appname %]</title>
+  <title>{{ title }}</title>
   <link rel="stylesheet" href="<% request.uri_base %>/css/style.css">
-
-<!-- Grab jQuery from a CDN, fall back to local if necessary -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript">/* <![CDATA[ */
-    !window.jQuery && document.write('<script type="text/javascript" src="<% request.uri_base %>/javascripts/jquery.js"><\/script>')
-/* ]]> */</script>
+  <script src="/javascripts/angular.min.js"></script>
+  <script src="/javascripts/dancer.js"></script>
 
 </head>
-<body>
+<body ng-app="DancerApp" ng-controller="DancerController">
+<h1>{{title}}</h1>
 <% content %>
+<img src="/images/perldancer.jpg">
+<div>
+<img src="/images/dcr-header-logo.png">
+</div>
 <div id="footer">
 Powered by <a href="http://perldancer.org/">Dancer2</a> <% dancer_version %>
 </div>
