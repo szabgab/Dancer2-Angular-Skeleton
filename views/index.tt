@@ -3,7 +3,11 @@
 <div>Date: {{date}}</div>
 <div>Dancer 2 version: {{dancer}}</div>
 <div>Perl version: {{perl}}</div>
-<button ng-init="config_table=0" ng-click="config_table = !config_table"><span ng-if="config_table">Hide</span> <span ng-if="!config_table">Show</span> Config</button>
+<button class="btn btn-primary" ng-init="config_table=0" ng-click="config_table = !config_table">
+  <span ng-if="config_table">Hide</span> <span ng-if="!config_table">Show</span> Config
+  <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+</button>
+
 <hr>
 <table ng-show="config_table">
 <tr ng-repeat="(k, v) in config"><td>{{k}}</td><td>{{v}}</td></tr>
